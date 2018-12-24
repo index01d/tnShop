@@ -16,7 +16,7 @@ module.exports = {
       user: 'thinknetica',
       host: ['tn.x01d.com'],
       ref: 'origin/master',
-      repo: 'git.github.com:index01d/tnShop.git',
+      repo: 'git@github.com:index01d/tnShop.git',
       path: '/home/thinknetica/client',
       'post-deploy': 'yarn && yarn build:server && pm2 startOrRestart pm2.config.js --env production'
     }
