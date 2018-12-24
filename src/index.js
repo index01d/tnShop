@@ -8,12 +8,14 @@ import history, { historyCb } from 'helpers/history';
 import routes from 'routes';
 import createStore from 'store';
 
-const store = createStore();
+const store = createStore(window.INITIAL_STATE);
 
 history.listen((location) => historyCb(store, routes, location));
-historyCb(store, routes, location);
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <App history={history} store={store} />,
-  document.getElementById('root')
+  document.getElementById('root'),
+  () => {
+    delete window.INITIAL_STATE;
+  }
 );

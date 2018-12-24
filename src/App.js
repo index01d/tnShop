@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Provider } from 'react-redux';
 
-import { Router, Switch, Route } from 'react-router-dom';
+import { Router, StaticRouter, Switch, Route } from 'react-router-dom';
 
 import MainLayout from 'components/layouts/Main';
 import routes from 'routes';

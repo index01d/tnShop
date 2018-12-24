@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "build:server": "yarn build && webpack --config ./initializers/webpack/server.js && rm -rf public/index.html",
     "build": "webpack --config ./initializers/webpack/production.js",
     "cleanup": "rm -rf public/assets",
     "lint": "eslint --quiet ./src",
@@ -36,6 +37,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-react": "^7.11.1",
     "html-webpack-plugin": "^3.2.0",
+    "ignore-loader": "^0.1.2",
     "mini-css-extract-plugin": "^0.5.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.2",
@@ -43,6 +45,7 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.13",
     "webpack-manifest-plugin": "^2.0.4",
-    "webpack-merge": "^4.1.5"
+    "webpack-merge": "^4.1.5",
+    "webpack-node-externals": "^1.7.2"
   }
 }

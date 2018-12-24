@@ -14,7 +14,8 @@ module.exports = {
       {
         test: /\.js$/,
         include: [
-          path.resolve(process.cwd(), 'src')
+          path.resolve(process.cwd(), 'src'),
+          path.resolve(process.cwd(), 'initializers', 'server')
         ],
         use: 'babel-loader'
       }
