@@ -4,9 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "cleanup": "rm -rf dist .cache",
+    "build": "webpack --config ./initializers/webpack/production.js",
+    "cleanup": "rm -rf public/assets",
     "lint": "eslint --quiet ./src",
     "lint:fix": "eslint --quiet --fix ./src",
+    "start:dev": "webpack-dev-server --config ./initializers/webpack/development.js",
     "start": "parcel ./index.html"
   },
   "dependencies": {
@@ -31,6 +33,7 @@
     "eslint": "^5.10.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-react": "^7.11.1",
+    "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.2",
     "webpack-bundle-analyzer": "^3.0.3",
