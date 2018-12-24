@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Helmet from 'react-helmet';
+
 import './Product.css';
 
 class Gallery extends Component {
@@ -48,6 +50,9 @@ class Gallery extends Component {
 
 const Product = ({ entry }) => (
   <div className='product'>
+    <Helmet>
+      <title>{entry.fields && entry.fields.title}</title>
+    </Helmet>
     <div className='col--left'>
       <div className='product__title'><h1>{entry.fields && entry.fields.title}</h1></div> 
       {

@@ -10,6 +10,7 @@
     "lint": "eslint --quiet ./src",
     "lint:fix": "eslint --quiet --fix ./src",
     "start:dev": "webpack-dev-server --config ./initializers/webpack/development.js",
+    "start:server": "node ./build/server.js",
     "start": "parcel ./index.html"
   },
   "dependencies": {
@@ -22,6 +23,7 @@
     "qs": "^6.6.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-helmet": "^5.2.0",
     "react-redux": "^6.0.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",

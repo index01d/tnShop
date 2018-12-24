@@ -1,7 +1,12 @@
 import React from 'react';
 
+import Helmet from 'react-helmet';
+
 const About = () => (
   <div style={{ lineHeight: '36px' }}>
+    <Helmet>
+      <title>About page</title>
+    </Helmet>
     <h1>React Basic</h1>
     Онлайн-курс для веб-разработчиков, которые хотят освоить и применять React и Redux в своих проектах.<br />
 

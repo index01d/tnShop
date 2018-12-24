@@ -3,10 +3,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { productPath } from 'helpers/routes';
 
+import Helmet from 'react-helmet';
+
 import './Products.css';
 
 const Products = ({ entries }) => (
   <div className='products'>
+    <Helmet>
+      <title>Smart Devices</title>
+    </Helmet>
     {entries.map(entry => (
       <div className='products__card' key={entry.sys.id}>
         <Link className='products__card__img' to={productPath(entry.sys.id)}>
