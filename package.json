@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "deploy": "pm2 deploy pm2.config.js production",
     "build:server": "yarn build && webpack --config ./initializers/webpack/server.js && rm -rf public/index.html",
     "build": "webpack --config ./initializers/webpack/production.js",
     "cleanup": "rm -rf public/assets",
