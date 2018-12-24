@@ -1,4 +1,4 @@
-import { CONTENTFUL, ENTRIES } from '~/src/middleware/API';
+import { CONTENTFUL, ENTRIES } from 'middleware/API';
 
 export const getProducts = () => ({
   [CONTENTFUL]: {

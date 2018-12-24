@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 
 import { Router, Switch, Route } from 'react-router-dom';
 
-import MainLayout from '~/src/components/layouts/Main';
-import history, { historyCb } from '~/src/helpers/history';
-import routes from '~/src/routes';
-import createStore from '~/src/store';
+import MainLayout from 'components/layouts/Main';
+import history, { historyCb } from 'helpers/history';
+import routes from 'routes';
+import createStore from 'store';
 
 import './App.css';
 

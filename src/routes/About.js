@@ -1,6 +1,6 @@
-import About from '~/src/components/views/About';
+import About from 'components/views/About';
 
-import { aboutPath } from '~/src/helpers/routes';
+import { aboutPath } from 'helpers/routes';
 
 export default {
   name: 'About',

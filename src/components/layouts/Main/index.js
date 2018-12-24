@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-import { mainPath, aboutPath } from '~/src/helpers/routes';
+import { mainPath, aboutPath } from 'helpers/routes';
 
 import './index.css';
 

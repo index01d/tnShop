@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { productPath } from '~/src/helpers/routes';
+import { productPath } from 'helpers/routes';
 
 import './Products.css';
 

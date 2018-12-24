@@ -1,7 +1,7 @@
-import Products from '~/src/components/views/Products';
+import Products from 'components/views/Products';
 
-import { mainPath } from '~/src/helpers/routes';
-import { getProducts } from '~/src/actions/Products';
+import { mainPath } from 'helpers/routes';
+import { getProducts } from 'actions/Products';
 
 export default {
   name: 'Products',

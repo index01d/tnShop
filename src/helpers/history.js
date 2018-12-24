@@ -1,7 +1,7 @@
 import { matchPath } from 'react-router-dom';
 import { parse } from 'qs';
 
-import prepareData from '~/src/helpers/prepareData';
+import prepareData from 'helpers/prepareData';
 import createBrowserHistory from 'history/createBrowserHistory';
 
 export const historyCb = (store, routes, location) => {
