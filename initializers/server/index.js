@@ -34,6 +34,6 @@ app.get(
 );
 
 app.listen(
-  PORT,
+  PORT, '0.0.0.0',
   () => console.log(`Server is listening on ${PORT}`)
 );
