@@ -1,3 +1,4 @@
+/* globals __CLIENT__, __SERVER__ */
 import React from 'react';
 
 import { Provider } from 'react-redux';
@@ -5,28 +6,29 @@ import { Provider } from 'react-redux';
 import { Router, Switch, Route } from 'react-router-dom';
 
 import MainLayout from 'components/layouts/Main';
-import history, { historyCb } from 'helpers/history';
 import routes from 'routes';
-import createStore from 'store';
 
 import './App.css';
-
-const store = createStore();
-
-history.listen((location) => historyCb(store, routes, location));
-historyCb(store, routes, location);
 
 const RouteWithSubRoutes = ({ name, ...route }) => (
   <Route {...route} key={name} />
 );
 
-const AppRouter = ({ history, children }) => (
-  <Router history={history}>{children}</Router>
-);
+const AppRouter = ({ history, children, location, context }) => {
+  if (__CLIENT__)
+    return (
+      <Router history={history}>{children}</Router>
+    );
 
-const App = ({ location }) => (
+  if (__SERVER__)
+    return (
+      <StaticRouter location={location} context={context}>{children}</StaticRouter>
+    );
+};
+
+const App = ({ history, store, location, context }) => (
   <Provider store={store}>
-    <AppRouter history={history} location={location}>
+    <AppRouter history={history} context={context} location={location}>
       <MainLayout>
         <Switch>
           {routes.map((route) => RouteWithSubRoutes(route))}
